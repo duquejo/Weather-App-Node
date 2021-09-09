@@ -195,5 +195,5 @@ app.get('*', ( request, response ) => {
  * hbs changes with: `nodemon src/app.js -e js,hbs` CLI Command.
  */
 app.listen( port, () => {
-  console.log( `Server is up on port ${port}.` );
+  console.log( `[NOTICE] - Server is up on port ${port}.` );
 } );
