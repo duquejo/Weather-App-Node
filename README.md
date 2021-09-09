@@ -12,5 +12,13 @@
   - Express (4.16.4): Server management module
   - Handlebars (4.0.1): Server HTML Templatting module
   - Postman Request (2.88.1-postman.30): HTTP Requests API management module.
+  - Nodemon (2.0.12): Listens any JS (or whatever) file changes.
   - [Weather App Git](https://github.com/duquejo01/Weather-App-Node): GIT Source.
   - [Weather App Demo](https://duque-weather-application.herokuapp.com/): Live Weather App Public Demo.
+
+## Commands
+
+  Use the following command into console to run automatically nodemon with JS and Handlebars scripts modification listening. It only works in your local machine.
+```sh
+npm run dev
+```
