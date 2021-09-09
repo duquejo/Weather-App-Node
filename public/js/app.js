@@ -7,12 +7,6 @@ console.log( 'Client side javascript file is loaded' );
  * @uses Promises
  */
 
-// fetch('http://puzzle.mead.io/puzzle').then( ( response ) => {
-//   response.json().then( ( data ) => {
-//     console.log( data );
-//   } )
-// });
-
 const $weatherForm = document.querySelector('form');
 const $messageOne = document.querySelector('#message-1');
 const $messageTwo = document.querySelector('#message-2');
@@ -25,7 +19,7 @@ $weatherForm.addEventListener( 'submit', (e) => {
   const location = $search.value;
 
   $messageOne.textContent = 'Loading...';
-  $messageTwo.textContent = '';  
+  $messageTwo.innerHTML = '';  
 
   /**
    * Calls App Weather endpoint
@@ -37,7 +31,7 @@ $weatherForm.addEventListener( 'submit', (e) => {
       } else {
         // Show API results
         $messageOne.textContent = data.location;
-        $messageTwo.textContent = data.forecast;
+        $messageTwo.innerHTML = data.forecast.replace(/(<\/?(?:a|p|img)[^>]*>)|<[^>]+>/ig, '$1');
       }
     });
   });

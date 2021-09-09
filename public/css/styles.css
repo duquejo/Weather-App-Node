@@ -53,3 +53,6 @@ button{
   color: #FFF;
   padding: 8px;
 }
+#message-2 img{
+  border-radius: 50%;
+}

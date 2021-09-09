@@ -5,23 +5,6 @@
  */
  const request = require('postman-request');
 
-/**
- * 
- * Old forecast URL Example
- * @description separated geocode function
- */
-// const url = 'http://api.weatherstack.com/current?access_key=5f2ef73ef5a30e700edad50847bd172c&query=37.8267,-122.4233';
-// request( { url, json: true }, ( error, response ) => {
-//   if( error ) {
-//     console.log( 'Unable to connect to Weather service!' );
-//   } else if ( response.body.error ){
-//     console.log( 'Unable to find location' );
-//   } else {
-//     const body = response.body.current;
-//     console.log( `It is currently ${ body.temperature } degrees out. It feels like ${ body.feelslike } out.` );
-//   }
-// });
-
  /**
   * 
   * Using Callback Abstraction Pattern
@@ -37,7 +20,7 @@ const forecast = ( lat, lng, callback ) => {
     } else if ( body.error ){
       callback( 'Unable to find location', undefined );
     } else {
-      callback( undefined,  `It is currently ${ body.current.temperature } degrees out. It feels like ${ body.current.feelslike } out. There is a ${ body.current.precip }% chance of rain.` );
+      callback( undefined,  `<img src="${ body.current.weather_icons[0] }" alt="${ body.current.weather_descriptions[0] }"/><p>It is currently ${ body.current.temperature } degrees out. It feels like ${ body.current.feelslike } out. There is a ${ body.current.precip }% chance of rain and finally there is a ${ body.current.wind_dir } Wind Direction.</p>` );
     }
   });
 }

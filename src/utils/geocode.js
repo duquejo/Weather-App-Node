@@ -3,32 +3,13 @@
  * @exports geocode to app.js
  * 
  * @api https://api.weatherstack.com
- * @param access_key 5f2ef73ef5a30e700edad50847bd172c (user key)
+ * @param access_key (user key)
  * @param query 37.8267,-122.4233 (lg,lt)
  * 
  * @uri http://api.weatherstack.com/current?access_key=5f2ef73ef5a30e700edad50847bd172c&query=37.8267,-122.4233
  * 
  */
 const request = require('postman-request');
-
-/**
- * 
- * Old geocode URL Example
- * @description separated geocode function
- */
-// const geocodeURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoiZHVxdWVqbyIsImEiOiJja3QzbzI2cTIwaWlkMm9yenU2dTVnc2ViIn0.Urzbuah4YgOGQY2NcAkL1g&limit=1&language=es';
-
-// request( { url: geocodeURL, json: true }, ( error, response ) => {
-//   // If error exists, response will be undefined in the same way with response and error undefined.
-//   if( error ) {
-//     console.log( 'Unable to connect to Geolocation service!' );
-//   } else if ( ! response.body.features ) {
-//     console.log( 'Location not found' );
-//   } else {
-//     const body = response.body;
-//     console.log( `Lat: ${ body.features[0].center[1] }\nLng: ${ body.features[0].center[0] }` );
-//   }
-// });
 
 /**
  * 

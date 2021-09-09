@@ -20,9 +20,6 @@ const { forecast } = require('./utils/forecast');
 /**
  * Node JS server constants (Global)
  */
-// console.log( __dirname );
-// console.log( path.join( __dirname, '../public' ) );
-
 // Define app container
 const app = express();
 
