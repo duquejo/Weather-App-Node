@@ -16,9 +16,13 @@
   - [Weather App Git](https://github.com/duquejo01/Weather-App-Node): GIT Source.
   - [Weather App Demo](https://duque-weather-application.herokuapp.com/): Live Weather App Public Demo.
 
+## Bootcamp Index
+
+Click on the following [link](https://github.com/duquejo01/BootCamp-Node-JS) to return back the Index.
+
 ## Commands
 
-  Use the following command into console to run automatically nodemon with JS and Handlebars scripts modification listening. It only works in your local machine.
+Use the following command into console to run automatically nodemon with JS and Handlebars scripts modification listening. It only works in your local machine.
 ```sh
 npm run dev
 ```
